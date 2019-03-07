@@ -53,7 +53,7 @@ public class Game3 {
             }
 
             else{
-                System.out.println("dont cheat ! give the correct answer");
+                System.out.println("don't cheat ! give the correct answer");
                 i--;
             }
         }

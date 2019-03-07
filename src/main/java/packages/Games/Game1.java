@@ -16,13 +16,13 @@ public class Game1 {
 
         int x = randomNumber(from,to);
         while (true) {
-            int value = scanInt("zgadnij liczbę z przedziału od " + from + " do " + to,"to nie jest liczba");
+            int value = scanInt("guess a number from " + from + " to " + to,"this is not a number");
             if (value < x) {
-                System.out.println("Za mało");
+                System.out.println("not enough");
             } else if (value > x) {
-                System.out.println("Za dużo");
+                System.out.println("too much");
             } else {
-                System.out.println("Zgadłeś !");
+                System.out.println("correct !");
                 break;
             }
         }
