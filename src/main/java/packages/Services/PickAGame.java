@@ -1,16 +1,21 @@
 package packages.Services;
 
-import java.sql.SQLOutput;
+import packages.Games.Game1_ProgramGuessingGivenNumber;
+import packages.Games.Game2_Lotto;
+import packages.Games.Game3_ProgramGuessingGivenNumber;
+import packages.Games.Game4_CreatingADiceAndRollingIt;
 
-import static packages.Games.Game1.zgadnijLiczbe;
-import static packages.Games.Game2.lottoComparison;
-import static packages.Games.Game3.guessingNumber;
-import static packages.Games.Game4.roll;
+
 import static packages.Services.ScannerService.scanInt;
 
 public class PickAGame {
 
-    public static int pickGame() {
+    private Game1_ProgramGuessingGivenNumber game1 = new Game1_ProgramGuessingGivenNumber();
+    private Game2_Lotto game2 = new Game2_Lotto();
+    private Game3_ProgramGuessingGivenNumber game3 = new Game3_ProgramGuessingGivenNumber();
+    private Game4_CreatingADiceAndRollingIt game4 = new Game4_CreatingADiceAndRollingIt();
+
+    protected static int pickGame() {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("which game do you want to pick ?");
@@ -28,24 +33,24 @@ public class PickAGame {
     }
 
 
-    public static void runPickedGame() {
+    public void runPickedGame() {
 
         switch (pickGame()) {
             case 1:
                 System.out.println("zgadnij liczbe z podanego przedziału");
-                zgadnijLiczbe(1, 100);
+                game1.guessNumber(1, 100);
                 break;
             case 2:
                 System.out.println("Zagrajmy w Lotto");
-                lottoComparison();
+                game2.lottoComparison();
                 break;
             case 3:
                 System.out.println("Zgaduje liczbę");
-                guessingNumber();
+                game3.guessingNumber();
                 break;
             case 4:
                 System.out.println("Lets pick a cube to roll, and roll it !");
-                roll();
+                game4.roll();
                 break;
             default:
                 System.out.println("there is no game with given number, try again");

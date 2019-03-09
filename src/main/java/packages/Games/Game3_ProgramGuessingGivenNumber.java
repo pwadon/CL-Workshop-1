@@ -1,12 +1,9 @@
 package packages.Games;
 
 import packages.Services.ScannerService;
-
-import java.util.Scanner;
-
 import static packages.Services.ScannerService.scanString;
 
-public class Game3 {
+public class Game3_ProgramGuessingGivenNumber {
     private static int max =1000;
     private static int min =0;
 
@@ -20,7 +17,7 @@ public class Game3 {
         return x;
     }
 
-    public static void guessingNumber(){
+    public void guessingNumber(){
         int x =givenNumber();
         int counter =0;
         for (int i = 0; i <10 ; i++)

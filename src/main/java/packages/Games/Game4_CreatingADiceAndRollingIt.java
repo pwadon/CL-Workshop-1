@@ -1,12 +1,9 @@
 package packages.Games;
 
 import packages.Services.ScannerService;
-
-import java.util.Random;
-
 import static packages.Services.RandomNumberService.randomNumber;
 
-public class Game4 {
+public class Game4_CreatingADiceAndRollingIt {
 
     private static int numberOfRolls(){
         int x = 0;
@@ -30,7 +27,7 @@ public class Game4 {
         return z;
     }
 
-    public static void roll(){
+    public void roll(){
         int rolls = numberOfRolls();
         int fields = numberOfCubeFields();
         int modifier = getModifier();

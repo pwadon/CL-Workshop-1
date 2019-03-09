@@ -1,18 +1,13 @@
 package packages.Games;
 
-
-
-import java.util.Random;
-
-
 import static packages.Services.RandomNumberService.randomNumber;
 import static packages.Services.ScannerService.scanInt;
 
-public class Game1 {
+public class Game1_ProgramGuessingGivenNumber {
 
 
 
-    public static void zgadnijLiczbe(int from, int to) {
+    public void guessNumber(int from, int to) {
 
         int x = randomNumber(from,to);
         while (true) {
