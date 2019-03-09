@@ -6,11 +6,16 @@ public class Game5FindArray {
     public static void main(String[] args) {
         final int[] array = {4, 9, 10,11, 7,9,10,11, 8,3,7,9,10,12,14};
         final int[] subArray = {10,11};
+        Game5FindArray game5FindArray = new Game5FindArray();
 
-        System.out.println(findArray2(array,subArray));
+        System.out.println(game5FindArray.findArray2(array,subArray));
     }
 
-    public static int findArray2(int[] array, int[] subArray) {
+    protected int findArray2(int[] array, int[] subArray) throws ArrayIndexOutOfBoundsException {
+
+        if(array.length==0 || subArray.length == 0){
+            throw new ArrayIndexOutOfBoundsException("given array is empty");
+        }
         int index=-1;
         int counter =0;
         if (subArray.length>array.length){
