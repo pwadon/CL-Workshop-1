@@ -1,12 +1,12 @@
 package packages.BasicJavaOperations;
 
 // Finding last occurrence of second array in 1st one. if no occurrence than drops -1
-public class Game5FindArray {
+public class FindArray {
 
     public static void main(String[] args) {
         final int[] array = {4, 9, 10,11, 7,9,10,11, 8,3,7,9,10,12,14};
         final int[] subArray = {10,11};
-        Game5FindArray game5FindArray = new Game5FindArray();
+        FindArray game5FindArray = new FindArray();
 
         System.out.println(game5FindArray.findArray2(array,subArray));
     }

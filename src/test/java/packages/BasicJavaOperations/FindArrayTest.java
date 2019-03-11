@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Game5FindArrayTest {
+class FindArrayTest {
 
     @Test
     void given2Tabs_ResultLastOccurrenceStartingIndex() {
@@ -15,7 +15,7 @@ class Game5FindArrayTest {
 
         //when
 
-        Game5FindArray game5FindArray = new Game5FindArray();
+        FindArray game5FindArray = new FindArray();
         int result = game5FindArray.findArray2(mainTab,tabToSearch);
 
         // then
@@ -31,7 +31,7 @@ class Game5FindArrayTest {
 
         //when
 
-        Game5FindArray game5FindArray = new Game5FindArray();
+        FindArray game5FindArray = new FindArray();
         int result = game5FindArray.findArray2(mainTab,tabToSearch);
 
         // then
@@ -47,7 +47,7 @@ class Game5FindArrayTest {
 
         //when
 
-        Game5FindArray game5FindArray = new Game5FindArray();
+        FindArray game5FindArray = new FindArray();
         int result = game5FindArray.findArray2(mainTab,tabToSearch);
 
         // then
@@ -59,7 +59,7 @@ class Game5FindArrayTest {
         //given
         int [] mainTab = {1,2,4,5,6,1,2,3,4,22,44,55,2,3,1,2,3,53,56};
         int [] tabToSearch = {};
-        Game5FindArray game5FindArray = new Game5FindArray();
+        FindArray game5FindArray = new FindArray();
         Throwable exception = assertThrows(ArrayIndexOutOfBoundsException.class, () ->game5FindArray.findArray2(mainTab,tabToSearch));
 
         assertEquals("given array is empty",exception.getMessage());

@@ -1,9 +1,6 @@
 package packages.Services;
 
-import packages.Games.Game1_ProgramGuessingGivenNumber;
-import packages.Games.Game2_Lotto;
-import packages.Games.Game3_ProgramGuessingGivenNumber;
-import packages.Games.Game4_CreatingADiceAndRollingIt;
+import packages.Games.*;
 
 
 import static packages.Services.ScannerService.scanInt;
@@ -27,8 +24,10 @@ public class PickAGame {
         stringBuilder.append("game number 3 - I'll guess the number you have picked from range 0 - 1000 in 10 guesses max");
         stringBuilder.append("\n");
         stringBuilder.append("game number 4 - Rolling a cube with given parameters");
+        stringBuilder.append("\n");
+        stringBuilder.append("game number 5 - European Capitals test");
         int gameNumber;
-        gameNumber = scanInt(stringBuilder.toString(), "podaj wartosc liczbowa");
+        gameNumber = scanInt(stringBuilder.toString(), "give a number");
         return gameNumber;
     }
 
@@ -37,20 +36,24 @@ public class PickAGame {
 
         switch (pickGame()) {
             case 1:
-                System.out.println("zgadnij liczbe z podanego przedziału");
+                System.out.println("guess number from given range");
                 game1.guessNumber(1, 100);
                 break;
             case 2:
-                System.out.println("Zagrajmy w Lotto");
+                System.out.println("Lets play Lotto");
                 game2.lottoComparison();
                 break;
             case 3:
-                System.out.println("Zgaduje liczbę");
+                System.out.println("I will guess the number that you picked in 10 guesses maximum");
                 game3.guessingNumber();
                 break;
             case 4:
                 System.out.println("Lets pick a cube to roll, and roll it !");
                 game4.roll();
+                break;
+            case 5:
+                System.out.println("Lest test your knowledge of some European Capitals");
+                Game5_Quizz.Game5Quiz();
                 break;
             default:
                 System.out.println("there is no game with given number, try again");
