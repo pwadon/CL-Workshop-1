@@ -11,7 +11,7 @@ public class Game5_Quizz {
     public static void Game5Quiz(){
         System.out.println("Pick correct capital of a given country, if you give up type quit");
         int counter = 0;
-        Map<String, String> map = QuizzQuestionsMap.questionsAndAnswearsMap();
+        Map<String, String> map = QuizzQuestionsMap.questionsAndAnswersMap();
         Set <String> countries = map.keySet();
         for(String key : countries){
             String answer = ScannerService.scanString("what is the capital of " + key + " ?");

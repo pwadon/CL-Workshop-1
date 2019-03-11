@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class QuizzQuestionsMap {
 
-    public static Map<String, String> questionsAndAnswearsMap(){
+    public static Map<String, String> questionsAndAnswersMap(){
         Map<String, String> questions = new HashMap<>();
         questions.put("Poland","Warsaw");
         questions.put("Albania","Tirana");
